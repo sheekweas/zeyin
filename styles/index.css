@@ -1,0 +1,1342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F9FF;
+  color: #0F0F0F;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ---------------------------
+   🌐 Zeyin NAVBAR
+--------------------------- */
+
+.zeyin-navbar {
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar a.nav-link {
+  color: #0f0f0f !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a.nav-link:hover {
+  color: #2b36ff !important;
+}
+
+/* --- Brand --- */
+.navbar-brand {
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+/* --- Primary Button --- */
+.btn-primary {
+  background-color: #2b36ff !important;
+  border-color: #2b36ff !important;
+  box-shadow: 0 3px 12px rgba(43, 54, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1f28c4 !important;
+  transform: translateY(-2px);
+}
+
+/* --- Coins Box --- */
+.coins-box {
+  background: linear-gradient(135deg, #ffffff, #f5f6ff);
+  border: 1px solid rgba(62, 75, 255, 0.1);
+  border-radius: 25px;
+  min-width: 80px;
+  font-weight: 600;
+  color: #222;
+  box-shadow: 0 2px 10px rgba(62, 75, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.coins-box:hover {
+  box-shadow: 0 3px 15px rgba(62, 75, 255, 0.25);
+}
+
+/* --- Avatar Dropdown --- */
+.avatar-toggle {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.avatar-toggle:hover img {
+  box-shadow: 0 0 15px rgba(62, 75, 255, 0.3);
+}
+
+.profile-dropdown .dropdown-menu {
+  border-radius: 15px;
+  padding: 8px;
+  min-width: 190px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  animation: dropdownFade 0.25s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-dropdown .dropdown-item {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  padding: 8px 14px;
+}
+
+.profile-dropdown .dropdown-item:hover {
+  background-color: rgba(62, 75, 255, 0.1);
+  color: #2b36ff !important;
+}
+
+.profile-dropdown .dropdown-divider {
+  margin: 6px 0;
+}
+
+
+
+/* ---------------------------
+   🦸 HERO SECTION
+--------------------------- */
+
+.hero-img {
+  max-height: 480px;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero-bg {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%232B36FF' fill-opacity='0.05' d='M0,96L60,90.7C120,85,240,75,360,106.7C480,139,600,213,720,240C840,267,960,245,1080,218.7C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z'></path></svg>");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+/* ---------------------------
+   ⚙️ FEATURES & CARDS
+--------------------------- */
+
+.feature-card {
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.feature-card:hover {
+  box-shadow: 0 10px 40px rgba(43, 54, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+/* ---------------------------
+   📊 STATISTICS
+--------------------------- */
+
+.stat-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 30px rgba(43, 54, 255, 0.1);
+}
+
+/* ---------------------------
+   🧩 STEPS
+--------------------------- */
+
+.step-card {
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(43,54,255,0.15);
+}
+
+/* ---------------------------
+   💰 PRICING
+--------------------------- */
+
+.pricing-card {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(43, 54, 255, 0.1);
+}
+
+/* ---------------------------
+   💬 TESTIMONIALS
+--------------------------- */
+
+.testimonial-card {
+  background: #F8F9FF;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(43,54,255,0.08);
+}
+
+/* ---------------------------
+   🚀 CTA SECTION
+--------------------------- */
+
+.cta-section {
+  background: linear-gradient(135deg, #0F0F0F 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 120%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(43,54,255,0.15), transparent 60%);
+  filter: blur(120px);
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ---------------------------
+   ✨ BUTTONS & HOVER EFFECTS
+--------------------------- */
+
+.btn-glow {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255,255,255,0.2);
+}
+
+.btn-outline-glow {
+  transition: all 0.3s ease;
+  border-color: rgba(255,255,255,0.5) !important;
+}
+
+.btn-outline-glow:hover {
+  background: rgba(255,255,255,0.1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255,255,255,0.15);
+}
+
+/* ---------------------------
+   🦶 FOOTER
+--------------------------- */
+
+footer {
+  background: radial-gradient(circle at top left, #121212, #0A0A0A);
+  color: #ccc;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+footer a:hover {
+  color: #2B36FF;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #2B36FF;
+}
+
+/* AUTH PAGES */
+
+.auth-layout {
+  background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
+}
+
+.auth-img {
+  max-width: 80%;
+  filter: drop-shadow(0 10px 30px rgba(43, 54, 255, 0.15));
+  animation: float 6s ease-in-out infinite;
+}
+
+.auth-layout .bg-white {
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.auth-layout h3 {
+  letter-spacing: -0.5px;
+}
+
+.auth-layout .form-control:focus {
+  border-color: #2B36FF;
+  box-shadow: 0 0 0 0.25rem rgba(43, 54, 255, 0.15);
+}
+
+.auth-layout button {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* 404 PAGE */
+.not-found-illustration {
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 8px 25px rgba(43, 54, 255, 0.1));
+}
+
+.not-found h1 {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+/* PROFILE */
+
+.profile-page {
+  background-color: var(--light-bg);
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/* ==== БАННЕР ==== */
+.banner {
+  height: 320px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1px);
+}
+
+.avatar-container {
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  object-fit: cover;
+  background-color: #fff;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+/* ==== XP / LEVEL ==== */
+.xp-display {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 3px 15px rgba(62, 75, 255, 0.1);
+  min-width: 280px;
+}
+
+.level-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3E4BFF, #6C63FF);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(62, 75, 255, 0.4);
+}
+
+.xp-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.xp-text {
+  font-weight: 600;
+  color: #333;
+}
+
+.xp-bar-wrapper {
+  background-color: #e8e9ff;
+  border-radius: 30px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.xp-progress {
+  height: 8px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #3E4BFF, #6C63FF, #00C4A7);
+}
+
+/* ==== ПЕРСОНАЛЬНЫЕ ДАННЫЕ ==== */
+
+.personal-card {
+  background-color: #f8f9ff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.personal-card:hover {
+  background-color: #edf0ff;
+  transform: translateY(-2px);
+}
+
+/* ==== ДОСТИЖЕНИЯ ==== */
+.achievements-section {
+  background: #f9f9ff;
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+.achievement-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(62, 75, 255, 0.15);
+}
+
+.achievement-icon {
+  color: #3E4BFF;
+  text-shadow: 0 0 8px rgba(62, 75, 255, 0.3);
+}
+
+.nav-pills .nav-link {
+  border-radius: 30px;
+  font-weight: 500;
+  padding: 10px 25px;
+  color: #555;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #3E4BFF;
+  color: white;
+}
+
+/* -----------------------------
+   🛒 Zeyin Store — modern look
+----------------------------- */
+
+.store-page {
+  background: linear-gradient(180deg, #f7f8ff 0%, #ffffff 100%);
+  padding-top: 100px;
+}
+
+/* === Фильтры категорий === */
+.category-btn {
+  background: #fff;
+  border: 1.5px solid rgba(43, 54, 255, 0.25);
+  color: #2b36ff;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background: #2b36ff;
+  color: #fff;
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #3e4bff, #6a5eff);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(43, 54, 255, 0.3);
+}
+
+/* === Монеты === */
+.coin-display {
+  background: linear-gradient(135deg, #fff, #f4f6ff);
+  border: 1px solid rgba(43, 54, 255, 0.15);
+  font-weight: 600;
+  color: #222;
+}
+
+/* === Карточки товаров === */
+.glass-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(43, 54, 255, 0.15);
+}
+
+/* === Изображения === */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.item-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.glass-card:hover .item-img {
+  transform: scale(1.07);
+}
+
+/* === Цена === */
+.price-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 6px 12px;
+  backdrop-filter: blur(5px);
+}
+
+/* === Модалка === */
+.modal-content {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #f8f9ff);
+}
+
+
+/* 🎒 MY ITEMS — Modern + Activation Animation */
+
+.my-items-page {
+  background: linear-gradient(180deg, #f7f8ff 0%, #ffffff 100%);
+  padding-top: 90px;
+}
+
+/* === Tabs === */
+.myitems-tabs .nav-link {
+  font-weight: 600;
+  color: #2b36ff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.myitems-tabs .nav-link.active {
+  background: linear-gradient(135deg, #3e4bff, #6a5eff);
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(43, 54, 255, 0.25);
+}
+
+/* === Item Cards === */
+.item-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.item-card {
+  background: #ffffff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(43, 54, 255, 0.1);
+}
+
+.active-card {
+  border: 3px solid #3e4bff !important;
+  box-shadow: 0 0 25px rgba(62, 75, 255, 0.4);
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(62, 75, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(62, 75, 255, 0.5);
+  }
+}
+
+/* === Изображения === */
+.item-image-wrapper {
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.item-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item-card:hover .item-img {
+  transform: scale(1.07);
+}
+
+/* === Эффект активации === */
+.activate-anim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, transparent 70%);
+  animation: flashEffect 1s ease-out;
+  border-radius: 20px;
+}
+
+@keyframes flashEffect {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* === Glow Icon при активации === */
+.activation-glow {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.glow-icon {
+  font-size: 72px;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 10px rgba(0,255,100,0.7));
+}
+
+/* === Модалка === */
+.modal-content {
+  background: linear-gradient(135deg, #ffffff, #f5f6ff);
+  border-radius: 20px;
+}
+
+.btn-primary {
+  background-color: #2b36ff !important;
+  border-color: #2b36ff !important;
+}
+
+
+/* 🌟 Leaderboard Modern Style */
+
+.leaderboard-page {
+  background: linear-gradient(180deg, #f7f8ff, #ffffff);
+  padding-top: 90px;
+  margin-top: 80px;
+}
+
+/* === Tabs === */
+.leaderboard-tabs .nav-link {
+  font-weight: 600;
+  color: #2b36ff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-tabs .nav-link.active {
+  background: linear-gradient(135deg, #3e4bff, #6a5eff);
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(43, 54, 255, 0.25);
+}
+
+/* === Leader Cards === */
+.leader-card {
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(43, 54, 255, 0.15);
+}
+
+.leader-avatar {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #e7e9ff;
+  object-fit: cover;
+}
+
+/* === Rank colors === */
+.leader-card.first {
+  background: linear-gradient(135deg, #fff6d1, #fff);
+}
+
+.leader-card.second {
+  background: linear-gradient(135deg, #f1f1f1, #fff);
+}
+
+.leader-card.third {
+  background: linear-gradient(135deg, #f9e3d1, #fff);
+}
+
+.rank-badge {
+  font-size: 0.8rem;
+}
+
+/* === Stat boxes === */
+.stat-box {
+  background: #f9f9ff;
+  border-radius: 12px;
+  padding: 14px;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  background: #eef2ff;
+  transform: translateY(-3px);
+}
+
+.avatar-lg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+
+
+
+/* EDIT PROFILE */
+.edit-profile-page {
+  background: linear-gradient(135deg, #f5f6ff, #e9e9ff, #f0f8ff);
+  padding: 40px 20px;
+}
+
+.edit-card {
+  max-width: 550px;
+  margin: auto;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(62, 75, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.edit-card:hover {
+  box-shadow: 0 12px 28px rgba(62, 75, 255, 0.2);
+}
+
+/* ==== Avatar ==== */
+.avatar-edit-container {
+  width: 140px;
+  height: 140px;
+}
+
+.avatar-edit {
+  width: 140px;
+  height: 140px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #3E4BFF;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(62,75,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: #6A5EFF;
+  transform: scale(1.1);
+}
+
+/* ==== Inputs ==== */
+.form-input {
+  border-radius: 12px;
+  border: 1px solid #dfe2ff;
+  padding: 12px 14px;
+  box-shadow: inset 0 0 4px rgba(62,75,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #3E4BFF;
+  box-shadow: 0 0 8px rgba(62,75,255,0.2);
+}
+
+/* ==== Save button ==== */
+.save-btn {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 12px 40px;
+  box-shadow: 0 0 10px rgba(62,75,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  box-shadow: 0 0 20px rgba(62,75,255,0.5);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   🎨 Zeyin Test Theme (Scoped)
+   Применяется только внутри .test-theme
+================================= */
+
+.test-theme {
+  background: #f4f5ff;
+  min-height: 100vh;
+  padding-top: 80px;
+  color: #0f0f0f;
+}
+
+/* --- Кнопки --- */
+.test-theme .btn-primary {
+  background: linear-gradient(90deg, #2b36ff, #7a6fff);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(43, 54, 255, 0.3);
+}
+.test-theme .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(43, 54, 255, 0.4);
+}
+
+.test-theme .btn-outline-primary {
+  border: 2px solid #2b36ff !important;
+  color: #2b36ff !important;
+  background: transparent;
+}
+.test-theme .btn-outline-primary:hover {
+  background: #2b36ff !important;
+  color: #fff !important;
+}
+
+/* --- Карточки --- */
+.test-theme .card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px !important;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.test-theme .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Таймер --- */
+.test-theme .timer-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(43, 54, 255, 0.1);
+  box-shadow: 0 0 10px rgba(43, 54, 255, 0.2);
+  font-size: 1.1rem;
+}
+
+/* --- Вкладки предметов --- */
+.test-theme button.rounded-pill {
+  transition: all 0.3s ease;
+}
+.test-theme button.rounded-pill.active,
+.test-theme button.rounded-pill:focus {
+  box-shadow: 0 0 10px rgba(43, 54, 255, 0.3);
+}
+
+/* --- Калькулятор --- */
+.test-theme .floating-calc {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 35px rgba(43, 54, 255, 0.3);
+  padding: 14px;
+  color: #2b36ff;
+  z-index: 999;
+}
+.test-theme .calc-header {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2b36ff;
+}
+.test-theme .calc-display {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 12px;
+  padding: 8px 10px;
+  text-align: right;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0f0f0f;
+}
+.test-theme .calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+.test-theme .calc-grid button {
+  border: none;
+  background: linear-gradient(135deg, #f1f2ff, #e2e3ff);
+  border-radius: 10px;
+  font-weight: 600;
+  color: #2b36ff;
+  transition: all 0.2s ease;
+  padding: 10px;
+}
+.test-theme .calc-grid button:hover {
+  background: linear-gradient(135deg, #dce0ff, #b7baff);
+  transform: scale(1.05);
+}
+
+/* --- Таблица Менделеева --- */
+.test-theme .floating-table {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 420px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 35px rgba(0, 200, 120, 0.3);
+  padding: 14px;
+  z-index: 999;
+}
+.test-theme .table-header {
+  font-weight: 600;
+  color: #198754;
+  margin-bottom: 8px;
+}
+/* ============================
+   🌈 TEST RESULTS ULTRA
+============================ */
+
+.test-theme .result-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8ff 100%);
+  border: 1px solid rgba(62, 75, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.test-theme .subject-card {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.test-theme .subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(43, 54, 255, 0.15);
+}
+
+.test-theme .error-modal .modal-content {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 50%, #f9f9ff 100%);
+  box-shadow: 0 8px 25px rgba(43, 54, 255, 0.2);
+}
+
+.test-theme .error-item {
+  background: #fff;
+  border-left: 4px solid #ff4b4b;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(255, 75, 75, 0.05);
+  transition: all 0.3s ease;
+}
+
+.test-theme .error-item:hover {
+  transform: translateX(6px);
+  background: #fff3f3;
+}
+
+
+/* ============================
+   ✨ TESTS LIST PAGE
+============================ */
+
+.test-theme .test-card {
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.test-theme .test-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(43, 54, 255, 0.15);
+}
+
+.test-theme .test-card-header {
+  padding: 24px 16px;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-bottom-left-radius: 60% 30%;
+  border-bottom-right-radius: 60% 30%;
+  box-shadow: inset 0 -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Тост уведомление */
+.test-theme .purchase-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #3E4BFF, #7A6FFF);
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(43, 54, 255, 0.4);
+  z-index: 1000;
+}
+
+/* Фильтры */
+.test-theme .btn-outline-primary {
+  border: 2px solid #3E4BFF !important;
+  color: #3E4BFF !important;
+  background: transparent !important;
+}
+.test-theme .btn-outline-primary:hover {
+  background: #3E4BFF !important;
+  color: white !important;
+}
+
+/* ============================
+   ✨ MY TESTS PAGE
+============================ */
+
+.test-theme .mytest-card {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.test-theme .mytest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(43, 54, 255, 0.15);
+}
+
+.test-theme .mytest-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 60% 30%;
+  border-bottom-right-radius: 60% 30%;
+  box-shadow: inset 0 -5px 15px rgba(255, 255, 255, 0.15);
+}
+
+.test-theme .empty-tests {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.test-theme .test-modal .modal-content {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 60%, #f6f7ff);
+  box-shadow: 0 8px 25px rgba(43, 54, 255, 0.2);
+}
+
+/* ============================
+   ⚡ MODERN TEST INTERFACE 2.0
+============================ */
+
+.test-theme .test-runner-modern {
+  background: linear-gradient(180deg, #f3f4ff 0%, #ffffff 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.test-theme .side-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-right: 1px solid rgba(43, 54, 255, 0.05);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.04);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.test-theme .focus-mode .side-panel {
+  display: none;
+}
+
+.test-theme .focus-mode .question-card-modern {
+  max-width: 900px;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+}
+
+.test-theme .timer-box-modern {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(43, 54, 255, 0.1);
+  font-size: 0.95rem;
+  border-radius: 30px;
+}
+
+.test-theme .question-card-modern {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.test-theme .question-card-modern:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.test-theme .options-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.test-theme .option-modern {
+  background: #f8f9ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.test-theme .option-modern:hover {
+  background: #eef0ff;
+}
+
+.test-theme .option-modern.selected {
+  background: linear-gradient(90deg, #3e4bff 0%, #6c7bff 100%);
+  color: white;
+  box-shadow: 0 0 12px rgba(43, 54, 255, 0.3);
+  border: 2px solid #3e4bff;
+}
+
+.test-theme .nav-btn-modern {
+  font-size: 0.8rem;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.test-theme .nav-btn-modern:hover {
+  transform: scale(1.1);
+}
+
+.test-theme .question-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.test-theme .question-img-modern {
+  max-height: 260px;
+  object-fit: contain;
+  background: #f8f9ff;
+  border-radius: 12px;
+}
+
+/* Floating info */
+.test-theme .floating-stats {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  color: #2b36ff;
+  z-index: 10;
+}
+
+/* Progress bar animation */
+.test-theme .progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Buttons */
+.test-theme .btn-primary {
+  background: linear-gradient(90deg, #2b36ff, #7a6fff);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(43, 54, 255, 0.3);
+}
+
+.test-theme .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(43, 54, 255, 0.4);
+}
+
+.test-theme .btn-outline-primary {
+  border: 2px solid #2b36ff !important;
+  color: #2b36ff !important;
+  background: transparent;
+}
+
+.test-theme .btn-outline-primary:hover {
+  background: #2b36ff !important;
+  color: #fff !important;
+}
+
+/* Exit modal */
+.test-theme .modal-content {
+  border-radius: 20px !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+/* Smooth fade for focus mode */
+.test-theme.focus-mode {
+  background: #f3f4ff;
+  transition: all 0.5s ease;
+}
+
+/* Floating calculator & table — macOS style */
+.floating-widget {
+  position: fixed;
+  z-index: 1050;
+  max-width: 400px;
+  min-width: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+
+.bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+
+.bottom-left {
+  bottom: 30px;
+  left: 30px;
+}
+
+button.rounded-pill {
+  transition: all 0.25s ease;
+}
+
+button.rounded-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(43, 54, 255, 0.3);
+}
+
+
+@media (max-width: 768px) {
+  [style*="position: fixed"][style*="bottom"] {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+  }
+}
+
+
+
+
+/* ---------------------------
+   📱 АДАПТИВНОСТЬ
+--------------------------- */
+
+@media (max-width: 768px) {
+  .hero-img {
+    max-width: 90%;
+    margin-top: 3rem;
+  }
+
+  h1.display-4 {
+    font-size: 2.3rem;
+  }
+
+  h2.display-6 {
+    font-size: 1.9rem;
+  }
+}
