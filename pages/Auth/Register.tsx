@@ -2,20 +2,30 @@ import { Form, Button } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import AuthLayout from "../../layouts/AuthLayout";
 
-export default function Login() {
+export default function Register() {
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/");
+    navigate("/auth/login");
   };
 
   return (
     <AuthLayout
-      title="Вход в Zeyin"
-      subtitle="Добро пожаловать! Подготовка к ЕНТ начинается здесь."
+      title="Регистрация в Zeyin"
+      subtitle="Создай свой аккаунт и начни готовиться к ЕНТ прямо сейчас!"
     >
       <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3">
+          <Form.Label>Имя и фамилия</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Айдар Нурланов"
+            required
+            className="py-2"
+          />
+        </Form.Group>
+
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
           <Form.Control
@@ -36,21 +46,14 @@ export default function Login() {
           />
         </Form.Group>
 
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <Form.Check label="Запомнить меня" />
-          <NavLink to="/auth/reset" className="text-primary text-decoration-none">
-            Забыли пароль?
-          </NavLink>
-        </div>
-
         <Button type="submit" className="w-100 py-2" variant="primary">
-          Войти
+          Зарегистрироваться
         </Button>
 
         <p className="text-center text-muted mt-4 mb-0">
-          Нет аккаунта?{" "}
-          <NavLink to="/auth/register" className="text-primary text-decoration-none">
-            Зарегистрироваться
+          Уже есть аккаунт?{" "}
+          <NavLink to="/auth/login" className="text-primary text-decoration-none">
+            Войти
           </NavLink>
         </p>
       </Form>
